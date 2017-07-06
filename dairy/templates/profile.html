@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+ <title>Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="conrainer">
+<h1>Profile</h1>
+Login {{ user }} <br>
+First name    {{ user.first_name }}<br>
+Email    {{ user.email }}<br>
+</div>
+{% endblock %}
