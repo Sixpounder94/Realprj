@@ -31,8 +31,8 @@
 
                 <li><a href="/dairy">Home</a> </li>
                 <li><a href="/dairy/logout">Logout</a> </li>
-                <li><a href="/dairy/profile">Profile</a> </li>
-                <li><a href="/dairy/profile/edit">Profile edit</a> </li>
+                <li><a href="{% url 'dairy:profile' %}">Profile</a> </li>
+                <li><a href="{% url 'dairy:ProfileEdit' %}">Profile edit</a> </li>
                 <li><a href="/dairy/change-password/">Change password</a> </li>
 
             </ul>

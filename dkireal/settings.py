@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'dkireal.middleware'
+    'dkireal.middleware.LoginRequairedMIddleware'
 ]
 
 ROOT_URLCONF = 'dkireal.urls'
@@ -124,3 +124,8 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/dairy/'
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
+LOGIN_URL  = '/dairy/login/'
+LOGIN_EXEMPT_URLS = (
+    'r^dairy/logout/$',
+    'r^dairy/register/$',
+)

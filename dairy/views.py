@@ -22,11 +22,11 @@ def register(request):
             return redirect('/dairy')
     else:
         form = RegistrationForm()
-        args={'form':form}
-        return render(request,'reg_form.html', args)
+        args={'form' : form}
+        return render(request, 'reg_form.html', args)
 
 
-@login_required
+
 def view_profile(request):
 
 
@@ -50,6 +50,7 @@ def edit_profile(request):
 
 @login_required
 def change_password(request):
+    print(request)
     if request.method == 'POST':
         form = PasswordChangeForm(data=request.POST, user=request.user)
 
@@ -63,3 +64,5 @@ def change_password(request):
         form = PasswordChangeForm(user=request.user)
         args = {'form' : form}
         return render(request, 'change_password.html', args)
+
+

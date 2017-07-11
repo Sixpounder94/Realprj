@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^$', login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
   #  url(r'^login/$', login, {'template_name':'login.html'}),
-    url(r'^dairy/', include('dairy.urls')),
+    url(r'^dairy/', include('dairy.urls', namespace = 'dairy')),
 ]
